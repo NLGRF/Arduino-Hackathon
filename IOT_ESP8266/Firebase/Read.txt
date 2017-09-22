@@ -1,0 +1,31 @@
+StaticJsonBuffer<200> jsonBuffer;
+  JsonObject& root = jsonBuffer.createObject();
+  root["a"] = 54;
+  root["b"] = 95;
+
+void set(String path, JsonVariant value) // update
+void setBool(String path, String value)
+void setInt(String path, String value)
+void setFloat(String path, String value)
+void setString(String path, String value)
+
+String push(String path, JsonVariant value) // insert
+String pushBool(String path, String value)
+String pushInt(String path, String value)
+String pushFloat(String path, String value)
+String pushString(String path, String value)
+
+FirebaseObject get(String path) // select
+bool getBool(String path)
+int getInt(String path)
+float getFloat(String path)
+String getString(String path)
+
+void remove(String path) // delete
+void stream(String path)
+
+bool available() // ??????????????????????????? ?????????? stream
+bool success() // ????????????????????
+bool failed() // ???????????????????????
+String error() // ???? Error Message
+FirebaseObject readEvent() // ?????????? stream
